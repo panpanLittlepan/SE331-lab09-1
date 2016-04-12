@@ -7,6 +7,7 @@
 
   function routeConfig($routeProvider) {
     $routeProvider
+    $routeProvider.
     when('/addProduct',{
       templateUrl: 'app/product/editProduct.html',
       controller: 'addProductController'
@@ -17,7 +18,8 @@
     }).
     when('/listProduct',{
       templateUrl: 'app/product/productList.html',
-      controller: 'listProductController'
+      controller: 'listProductController',
+      controllerAS: 'vm'
     }).
     when('/shoppingCart/:id',{
       templateUrl: 'app/shoppingcart/shoppingCart.html',

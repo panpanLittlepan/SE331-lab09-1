@@ -35,20 +35,21 @@
 
   /** @ngInject */
   function listProductController($scope, $rootScope,productService,$route,totalCalService,queryProductService) {
+    var vm = this;
     //$http.get("/product/").success(function (data) {
     var data = productService.query(function () {
       // $scope.totalNetPrice= totalCalService.getTotalNetPrice(data);
-      $scope.products = data;
+      vm.products = data;
     });
 
 
-    $scope.$on('$locationChangeStart', function (event) {
+    $scope.$on('$locationChangeStart', function () {
       $rootScope.addSuccess = false;
       $rootScope.editSuccess = false;
       $rootScope.deleteSuccess = false;
     });
 
-    $scope.deleteProduct = function (id) {
+    vm.deleteProduct = function (id) {
       var answer = confirm("Do you want to delete the product?");
       if (answer) {
         productService.delete({id: id}, function () {
@@ -58,9 +59,9 @@
       }
     }
 
-    $scope.searchProduct = function (name) {
+    vm.searchProduct = function (name) {
       queryProductService.query({name: name}, function (data) {
-        $scope.products = data;
+        vm.products = data;
       });
     }
 

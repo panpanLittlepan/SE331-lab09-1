@@ -2,6 +2,7 @@
   'use strict';
 
   angular
+    .module('app')
     .config(configTranslation)
     .config(configCompilerProvider)
     .config(configFlowFactoryProvider);
@@ -15,6 +16,7 @@
     $translateProvider.fallbackLanguage('en');
   }
 
+  /** @ngInject */
   function configFlowFactoryProvider (flowFactoryProvider){
     flowFactoryProvider.defaults = {
       target:'',
