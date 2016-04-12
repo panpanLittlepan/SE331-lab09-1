@@ -1,3 +1,4 @@
+(function(){
 'use strict';
 
 var productMainController = angular.module('productMainController', ['productServices']);
@@ -76,3 +77,5 @@ productMainController.controller('editProductController', ['$scope', '$http', '$
             });
         }
     }]);
+
+})();

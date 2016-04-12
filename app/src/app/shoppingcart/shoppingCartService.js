@@ -1,3 +1,4 @@
+(function(){
 'use strict'
 var shoppingCartServices = angular.module('shoppingCartServices',['ngResource']);
 shoppingCartServices.factory('shoppingCartService',function($resource){
@@ -7,3 +8,5 @@ shoppingCartServices.factory('shoppingCartService',function($resource){
         }});
 
 })
+
+})();

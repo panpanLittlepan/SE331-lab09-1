@@ -1,3 +1,4 @@
+(function (){
 'use strict';
 var langController = angular.module('languageControllers',['languageServices']);
 
@@ -12,3 +13,4 @@ langController.controller('languageController',['$scope','$translate','$location
             $scope.currentLocale=locale;
         }
     }])
+})();

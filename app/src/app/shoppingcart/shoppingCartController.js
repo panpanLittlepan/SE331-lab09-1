@@ -1,3 +1,4 @@
+(function(){
 'use strict';
 
 var shoppingCartControllers = angular.module('shoppingCartControllers', ['shoppingCartServices']);
@@ -35,3 +36,4 @@ shoppingCartControllers.controller('showShoppingCartController',
             return total;
         }
     }]);
+})();

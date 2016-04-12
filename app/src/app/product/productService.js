@@ -1,3 +1,4 @@
+(function(){
 'use strict'
 var productService = angular.module('productServices',['ngResource']);
 
@@ -27,3 +28,5 @@ productService.factory('queryProductService',function($resource){
 
         });
 })
+
+})();

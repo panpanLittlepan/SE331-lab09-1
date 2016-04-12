@@ -1,3 +1,4 @@
+(function(){
 'use strict';
 var languageServices = angular.module('languageServices',[]);
 
@@ -11,3 +12,4 @@ languageServices.factory('UrlLanguageStorage',['$location',
             }
         };
     }]);
+})();
