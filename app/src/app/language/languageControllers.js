@@ -2,7 +2,7 @@
 'use strict';
   angular
     .module('app')
-    .controller('languageController',languageController);
+    .controller('LanguageController',languageController);
 
 
   /** @ngInject */
