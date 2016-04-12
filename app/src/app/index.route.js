@@ -10,20 +10,23 @@
     $routeProvider.
     when('/addProduct',{
       templateUrl: 'app/product/editProduct.html',
-      controller: 'addProductController'
+      controller: 'addProductController',
+      controllerAs: 'vm'
     }).
     when('/editProduct/:id',{
       templateUrl: 'app/product/editProduct.html',
-      controller: 'editProductController'
+      controller: 'editProductController',
+      controllerAs: 'vm'
     }).
     when('/listProduct',{
       templateUrl: 'app/product/productList.html',
       controller: 'listProductController',
-      controllerAS: 'vm'
+      controllerAs: 'vm'
     }).
     when('/shoppingCart/:id',{
       templateUrl: 'app/shoppingcart/shoppingCart.html',
-      controller: 'showShoppingCartController'
+      controller: 'showShoppingCartController',
+      controllerAs: 'vm'
     }).
     otherwise({redirectTo: '/listProduct'});
   }

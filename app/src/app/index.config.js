@@ -26,9 +26,9 @@
       simultaneousUploads: 4,
       singleFile: false
     };
-    flowFactoryProvider.on('catchAll', function (event) {
+    /*flowFactoryProvider.on('catchAll', function () {
       console.log('catchAll', arguments);
-    });
+    });*/
 
   }
 
