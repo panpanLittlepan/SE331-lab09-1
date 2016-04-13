@@ -1,5 +1,5 @@
 (function(){
-'use strict'
+'use strict';
   angular
     .module('app')
     .factory('productService',productService)
@@ -23,7 +23,7 @@
     this.getTotalNetPrice = function (products) {
       var output = 0.0;
 
-      for (var index = 0; index < products.length;index++) {
+      for (var index = 0; index < products.length; index++) {
         var product = products[index];
         output += parseFloat(product.netPrice);
       }

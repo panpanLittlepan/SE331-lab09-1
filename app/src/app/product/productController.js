@@ -58,7 +58,7 @@
           $route.reload();
         })
       }
-    };
+    }
 
     vm.searchProduct = function (name) {
       queryProductService.query({name: name}, function (data) {
