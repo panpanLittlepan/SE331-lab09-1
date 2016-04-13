@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -6,24 +6,27 @@
     .config(routeConfig);
 
   function routeConfig($routeProvider) {
-    $routeProvider
-    when('/addProduct',{
+    $routeProvider.
+    when('/addProduct', {
       templateUrl: 'app/product/editProduct.html',
-      controller: 'addProductController'
+      controller: 'addProductController',
+      controllerAs: 'vm'
     }).
-    when('/editProduct/:id',{
+    when('/editProduct/:id', {
       templateUrl: 'app/product/editProduct.html',
-      controller: 'editProductController'
+      controller: 'editProductController',
+      controllerAs: 'vm'
     }).
-    when('/listProduct',{
+    when('/listProduct', {
       templateUrl: 'app/product/productList.html',
-      controller: 'listProductController'
+      controller: 'listProductController',
+      controllerAs: 'vm'
     }).
-    when('/shoppingCart/:id',{
+    when('/shoppingCart/:id', {
       templateUrl: 'app/shoppingcart/shoppingCart.html',
-      controller: 'showShoppingCartController'
-    }).
-    otherwise({redirectTo: '/listProduct'});
+      controller: 'shoppingCartController',
+      controllerAs: 'vm'
+    }).otherwise({redirectTo: '/listProduct'});
   }
 
 })();

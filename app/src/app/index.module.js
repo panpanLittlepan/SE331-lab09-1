@@ -1,7 +1,7 @@
-(function() {
+(function () {
   'use strict';
 
   angular
-    .module('labApp', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'flow']);
+    .module('app', ['ngRoute', 'ngResource', 'pascalprecht.translate', 'flow']);
 
 })();
