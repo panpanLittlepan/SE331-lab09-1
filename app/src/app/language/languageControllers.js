@@ -17,7 +17,7 @@
       $location.search('lang', locale);
       vm.currentLocale = locale;
     }
-  };
+  }
 
 
 })();
