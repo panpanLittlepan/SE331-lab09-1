@@ -2,19 +2,20 @@
 'use strict';
   angular
     .module('app')
-    .controller('languageController',languageController);
+    .controller('LanguageController',languageController);
 
 
   /**@ngInject */
   function languageController($scope,$translate,$location,$locale)
   {
+    var vm = this;
     var currentLocal = $locale.id.substring(0,2);
 
-    $scope.currentLocale = currentLocal;
-    $scope.changeLanguage = function(locale) {
+    vm.currentLocale = currentLocal;
+    vm.changeLanguage = function(locale) {
       $translate.use(locale);
       $location.search('lang', locale);
-      $scope.currentLocale = locale;
+      vm.currentLocale = locale;
     }
   };
 

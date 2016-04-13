@@ -9,11 +9,12 @@
 
   /** @ngInject */
   function addProductController($scope, $http, $location, $rootScope,productService) {
-    $scope.product = {};
-    $scope.addPerson = true;
-    $scope.editPerson = false;
-    $scope.addProduct = function (flowFiles) {
-      productService.save($scope.product, function (data) {
+  var vm = this;
+    vm.product = {};
+    vm.addPerson = true;
+    vm.editPerson = false;
+    vm.addProduct = function (flowFiles) {
+      productService.save(vm.product, function (data) {
         // after adding the object, add a new picture
         // get the product id which the image will be addded
         var productid = data.id;
@@ -70,16 +71,17 @@
 
   /** @ngInject */
   function editProductController($scope, $http, $routeParams, $location, $rootScope,productService) {
-    $scope.addPerson = false;
-    $scope.editPerson = true;
+    var vm = this
+    vm.addPerson = false;
+    vm.editPerson = true;
     var id = $routeParams.id;
     $http.get("/product/" + id).success(function (data) {
-      $scope.product = data;
+      vm.product = data;
     });
 
-    $scope.editProduct = function () {
+    vm.editProduct = function () {
       //$http.put("/product", $scope.product).then(function () {
-      productService.update({id: $scope.product.id}, $scope.product, function () {
+      productService.update({id: vm.product.id}, vm.product, function () {
         $rootScope.editSuccess = true;
         $location.path("listProduct");
       });
