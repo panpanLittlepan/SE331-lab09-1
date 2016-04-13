@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="app">
+<html ng-app="app" class="ng-vm">
   <head>
     <meta charset="utf-8">
     <title>app</title>
@@ -26,7 +26,7 @@
     </h1>
   </div>
 
-  <div class="navbar navbar-default">
+  <div class="navbar navbar-default" ng-controller="LanguageController as vm">
     <div class="container-fluid">
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
